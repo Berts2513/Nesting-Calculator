@@ -58,7 +58,7 @@ function calculateNesting() {
 		totalParts += partsInSheet;
 
 		const areaOccupied = partsInSheet * part.length * part.width;
-		remainingArea -= areaOccupied;
+		remainingArea = areaOccupied;
 	});
 
 	const result = `Best method for nesting: ${totalParts} parts can fit in the ${sheetWidth}" x ${sheetLength}" sheet. There is also a remaining area of ${remainingArea} square inches.`;
@@ -93,7 +93,7 @@ function drawNesting(parts, sheetLength, sheetWidth, spacing) {
 		}
 
 		ctx.fillRect(currentX, currentY, part.width * scale, part.length * scale);
-		ctx.fillText(currentX + 5, currentY + 15);
+		// ctx.fillText(`Part`, currentX + 5, currentY + 15);
 
 		currentX += widthWithSpacing;
 	});
