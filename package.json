@@ -1,0 +1,28 @@
+{
+	"name": "nesting-calculator",
+	"version": "1.0.0",
+	"description": "Nesting calculator for woodworking\r V1- Initial setup\r V2- Created \"Add Part\" button. This feature allows user to add multiple parts from cutlist.\r V3- Created the feature to change the usable sheet dimensions\r V4- Created feature to generate the nesting image\r V5- Altered code to orientate parts next to each other, instead of overlapping\r V6- Created \"Reset\" button",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodyCausey/Nesting-Calculator.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/CodyCausey/Nesting-Calculator/issues"
+	},
+	"homepage": "https://github.com/CodyCausey/Nesting-Calculator#readme",
+	"devDependencies": {
+		"tailwindcss": "^3.3.3"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.14",
+		"postcss-cli": "^10.1.0",
+		"watch": "^0.13.0"
+	}
+}
