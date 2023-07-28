@@ -93,7 +93,7 @@ function drawNesting(parts, sheetLength, sheetWidth, spacing) {
 		}
 
 		ctx.fillRect(currentX, currentY, part.width * scale, part.length * scale);
-		ctx.fillText(`Part`, currentX + 5, currentY + 15);
+		ctx.fillText(currentX + 5, currentY + 15);
 
 		currentX += widthWithSpacing;
 	});
