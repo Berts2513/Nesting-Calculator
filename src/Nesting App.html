@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>2D Nesting Calculator</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script async src="main.js"></script>
+	</head>
+	<body class="flex justify-center text-white bg-slate font-spacegrotesk">
+		<!-- Header -->
+		<div class="">
+			<div class="flex justify-between px-10 py-8 rounded-b-lg shadow-lg bg-lightblack drop-shadow-md">
+				<h1 class="text-3xl font-bold"><span class="underline">2D Nesting</span> Calculator</h1>
+				<a class="mt-2 font-bold pl-44" href="">About Us</a>
+			</div>
+			<!-- Dimensions of sheet  -->
+			<div class="flex flex-col items-center justify-center py-6 lg:flex-row drop-shadow-md">
+				<p class="p-5 font-bold">Enter the dimensions of the sheet:</p>
+				<label class="pl-5 pr-2" for="sheetLength">Sheet Length:</label>
+				<input class="h-5 text-black" type="number" id="sheetLength" step="0.01" value="96" required />
+				<label class="pl-5 pr-2" for="sheetWidth">Sheet Width:</label>
+				<input
+					class="h-5 text-black"
+					class="shadow-lg"
+					type="number"
+					id="sheetWidth"
+					step="0.01"
+					value="48"
+					required
+				/>
+			</div>
+			<!-- Dimensions of parts -->
+			<div class="flex flex-col items-center justify-center py-6 lg:flex-row drop-shadow-md">
+				<p class="p-5 font-bold">Enter the dimensions of the parts to be nested:</p>
+				<label class="pl-5 pr-2" for="length">Length:</label>
+				<input class="text-black" type="number" id="length" step="0.01" required />
+				<label class="pl-5 pr-2" for="width">Width:</label>
+				<input class="text-black" type="number" id="width" step="0.01" required />
+			</div>
+			<div class="flex flex-row items-center justify-around py-6">
+				<!-- Buttons at bottom -->
+				<button
+					class="px-2 pb-1 delay-75 border-solid rounded-md shadow-lg bg-lightblack drop-shadow-md hover:bg-buttonclick active:shadow-inner active:bg-lightblack"
+					onclick="addPart()"
+				>
+					Add Part
+				</button>
+				<button
+					class="px-2 pb-1 underline delay-75 border-solid rounded-md shadow-lg bg-lightblack drop-shadow-md hover:bg-buttonclick active:shadow-inner active:bg-lightblack"
+					onclick="calculateNesting()"
+				>
+					Calculate Nesting
+				</button>
+				<button
+					class="px-2 pb-1 delay-75 border-solid rounded-md shadow-lg bg-lightblack drop-shadow-md hover:bg-buttonclick active:shadow-inner active:bg-lightblack"
+					onclick="reset()"
+				>
+					Reset
+				</button>
+			</div>
+			<!-- Drop down info -->
+			<div class="flex flex-col items-center justify-center px-6 py-6 drop-shadow-md">
+				<div class="pb-4 drop-shadow-md" id="partsList">
+					<!-- Parts will be displayed here -->
+				</div>
+				<div class="font-bold drop-shadow-md" id="result">
+					<!-- Result will be displayed here -->
+				</div>
+			</div>
+			<div class="flex items-center justify-center">
+				<canvas
+					class="mb-16 border-4 border-solid rounded-md shadow-lg border-lightblack"
+					id="canvas"
+					width="400"
+					height="400"
+				></canvas>
+			</div>
+			<!-- Footer -->
+			<div class="flex justify-between px-10 py-8 rounded-t-lg shadow-lg bg-lightblack drop-shadow-md">
+				<p class="font-bold">© 2023</p>
+				<div class="flex">
+					<a href=""><img class="w-5 h-5 mr-2" src="\src\img\facebook logo_icon.png" alt="" /></a>
+					<a href=""><img class="w-5 h-5 mr-2" src="\src\img\instagram logo_icon.png" alt="" /></a>
+					<a href=""><img class="w-5 h-5" src="\src\img\twitter logo_icon.png" alt="" /></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
